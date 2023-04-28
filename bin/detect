@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
+set -eo pipefail
 
-BUILD_DIR=$1
-
-if [ ! -f "$BUILD_DIR/.null" ] &&  [ ! -f "$BUILD_DIR/null" ]; then
-  exit 1
-fi
+BUILD_DIR="$1"
+cd "$BUILD_DIR"
 
 echo "null"
